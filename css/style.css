@@ -3,6 +3,13 @@ body {
     color: #fff;
 }
 
-.content {
-    
+.figure-container {
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 3;
+    stroke-linecap: round;
+}
+
+.subtitle {
+    color: #fff;  
 }
