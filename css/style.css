@@ -13,3 +13,7 @@ body {
 .subtitle {
     color: #fff;  
 }
+
+.body-part {
+    display: none;
+}
