@@ -16,7 +16,12 @@
 			<div class="columns">
 				<div class="column is-12-desktop has-text-centered">
 					<h1 class="title is-1">Hangman</h1>
-					<p class="subtitle is-4">Enter a letter</p>
+					<div class="wrong-letters-container">
+						<div id="wrong-letters">
+							<p class="subtitle is-5">Wrong letters</p>
+							<span class="subtitle is-5">e,r,t,y</span>
+						</div>
+					</div>
 					<div class="game-container">
 						<svg  height="300" width="250" class="figure-container">
 							<!-- stick -->
@@ -37,6 +42,27 @@
 							<!-- right leg -->
 							<line x1="140" y1="150" x2="170" y2="200" class="body-part" />
 						</svg>
+
+						<div class="word has-text-centered" id="word">
+							<div class="letter">h</div>
+							<div class="letter">e</div>
+							<div class="letter">l</div>
+							<div class="letter">l</div>
+							<div class="letter">o</div>
+						</div>
+					</div>
+
+					<!-- Container for final message -->
+					<div class="popup-container" id="popup-container">
+						<div class="popup">
+							<h2 id="final-message">You have won!</h2>
+							<button id="play-button">Play Again</button>
+						</div>
+					</div>
+
+					<!-- Notification -->
+					<div class="notification-container" id="notification-container">
+						<p>You have already entered this letter</p>
 					</div>
 				</div>
 			</div>
