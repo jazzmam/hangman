@@ -65,8 +65,7 @@ body {
 }
 
 .popup-container {
-	/* display: none; */
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.7);
 	position: fixed;
 	top: 0;
 	bottom: 0;
@@ -82,9 +81,17 @@ body {
 	background-color: #c2f5ed;
 	color: #00947e;
 	border-radius: 5px;
-	padding: 3em 6em;
+	padding: 2em 5em;
 }
 
-.button {
+.button.is-primary {
+	background-color: #F25C05;
+	font-weight: 500;
+    padding: 25px 40px;
 	margin: 3em;
+}
+
+.button.is-primary:focus {
+	background-color: #aa3f01;
+
 }

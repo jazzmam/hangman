@@ -12,7 +12,7 @@ const words = ['pandemic', 'confirmed case', 'immunity', 'outbreak', 'quarantine
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
-const correctLetters = ['r', 'a', 's'];
+const correctLetters = ['o', 'u', 't', 'b', 'r', 'e', 'a', 'k'];
 const wrongLetters = [];
 
 function displayWord() {
@@ -32,8 +32,9 @@ function displayWord() {
 
 	const WordFromSelectedLetters = wordEl.innerText.replace(/\n/g,'');
 	
-	if (WordFromSelectedLetters = selectedWord) {
+	if (WordFromSelectedLetters == selectedWord) {
 		finalMessage.innerText = 'Congrats! You won!';
+		popup.style.display = 'flex';
 	}
 }
 
