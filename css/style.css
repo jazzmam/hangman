@@ -95,3 +95,11 @@ body {
 	background-color: #aa3f01;
 
 }
+
+.wrong-letters-container {
+	display: none;
+}
+
+.wrong-letters {
+	letter-spacing: 3px;
+}

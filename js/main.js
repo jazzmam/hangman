@@ -1,6 +1,7 @@
 
 const wordEl = document.getElementById('word');
 const wrongLettersContainerEl = document.getElementById('wrong-letters-container');
+const wrongLettersEl = document.getElementById('wrong-letters');
 const playAgainBtn = document.getElementById('play-again');
 const popup = document.getElementById('popup-container');
 const notification = document.getElementById('notification-container');
@@ -48,14 +49,18 @@ window.addEventListener('keydown', e => {
 		const pressedLetter = e.key;
 
 		if (selectedWord.includes(pressedLetter)) {
-			if (!correctLetters.includes(letter)) {
+			if (!correctLetters.includes(pressedLetter)) {
 				correctLetters.push(pressedLetter);
 				displayWord();
 			} else {
 				shownNotification();
 			}
 		} else {
-			wrongLetters.push(pressedLetter);
+			if (!wrongLetters.includes(pressedLetter)) {
+				wrongLetters.push(pressedLetter);
+				wrongLettersEl.innerText += pressedLetter;
+				wrongLettersContainerEl.style.display = 'flex';
+			}
 		}
 	}
 });
