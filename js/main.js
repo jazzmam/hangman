@@ -48,11 +48,13 @@ window.addEventListener('keydown', e => {
 		const pressedLetter = e.key;
 
 		if (selectedWord.includes(pressedLetter)) {
-			correctLetters.push(pressedLetter);
-
-			displayWord();
+			if (!correctLetters.includes(letter)) {
+				correctLetters.push(pressedLetter);
+				displayWord();
+			} else {
+				shownNotification();
+			}
 		} else {
-			shownNotification();
 			wrongLetters.push(pressedLetter);
 		}
 	}
