@@ -38,12 +38,23 @@ function displayWord() {
 	}
 }
 
+function shownNotification() {
+ console.log("wrong lettert");
+}
+
 //Keyboard pressing
 window.addEventListener('keydown', e => {
-	//console.log(e.keyCode);
-
 	if((e.keyCode >= 65 && e.keyCode <= 90) || e.keyCode == 32 || e.keyCode == 189) {
-		console.log('sdss');
+		const pressedLetter = e.key;
+
+		if (selectedWord.includes(pressedLetter)) {
+			correctLetters.push(pressedLetter);
+
+			displayWord();
+		} else {
+			shownNotification();
+			wrongLetters.push(pressedLetter);
+		}
 	}
 });
 
