@@ -40,7 +40,7 @@ function displayWord() {
 }
 
 function shownNotification() {
- console.log("wrong lettert");
+ console.log("inside shownNotification function - you have already entered this letter");
 }
 
 //Keyboard pressing
@@ -59,7 +59,7 @@ window.addEventListener('keydown', e => {
 			if (!wrongLetters.includes(pressedLetter)) {
 				wrongLetters.push(pressedLetter);
 				wrongLettersEl.innerText += pressedLetter;
-				wrongLettersContainerEl.style.display = 'flex';
+				wrongLettersContainerEl.style.display = 'inline-flex';
 			}
 		}
 	}

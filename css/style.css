@@ -101,5 +101,6 @@ body {
 }
 
 .wrong-letters {
+	padding: 0 5px;
 	letter-spacing: 3px;
 }
