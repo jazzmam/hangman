@@ -15,12 +15,9 @@
 		<div class="container">
 			<div class="columns">
 				<div class="column is-12-desktop has-text-centered">
-					<h1 class="title is-1">Hangman</h1>
+					<h1 class="title is-1">Covid-19 Hangman</h1>
 					<div class="wrong-letters-container">
-						<div id="wrong-letters-container">
-							<p>Wrong letters:</p>
-							<span class="wrong-letters">e,r,t,y</span>
-						</div>
+						<div id="wrong-letters-container"></div>
 					</div>
 					<div class="game-container">
 						<svg  height="300" width="250" class="figure-container">
@@ -30,26 +27,20 @@
 							<line x1="60" y1="20" x2="60" y2="250" />
 							<line x1="10" y1="250" x2="110" y2="250" />
 							<!-- head -->
-							<circle cx="140" cy="70" r="20" class="body-part" />
+							<circle cx="140" cy="70" r="20" class="figure-part" />
 							<!-- body -->
-							<line x1="140" y1="90" x2="140" y2="150" class="body-part" />
+							<line x1="140" y1="90" x2="140" y2="150" class="figure-part" />
 							<!-- left hand -->
-							<line x1="110" y1="100" x2="140" y2="130" class="body-part" />
+							<line x1="110" y1="100" x2="140" y2="130" class="figure-part" />
 							<!-- right hand -->
-							<line x1="140" y1="130" x2="170" y2="100" class="body-part" />
+							<line x1="140" y1="130" x2="170" y2="100" class="figure-part" />
 							<!-- left leg -->
-							<line x1="110" y1="200" x2="140" y2="150" class="body-part" />
+							<line x1="110" y1="200" x2="140" y2="150" class="figure-part" />
 							<!-- right leg -->
-							<line x1="140" y1="150" x2="170" y2="200" class="body-part" />
+							<line x1="140" y1="150" x2="170" y2="200" class="figure-part" />
 						</svg>
 
-						<div class="word has-text-centered" id="word">
-							<div class="letter">h</div>
-							<div class="letter">e</div>
-							<div class="letter">l</div>
-							<div class="letter">l</div>
-							<div class="letter">o</div>
-						</div>
+						<div class="word has-text-centered" id="word"></div>
 					</div>
 
 					<!-- Notification -->
@@ -61,7 +52,7 @@
 					<article class="popup-container" id="popup-container">
 						<div class="popup">
 							<p id="final-message">Congrats! You have won!</p>
-							<button class="button is-primary" id="play-button">Play Again</button>
+							<button class="button is-primary" id="play-again">Play Again</button>
 						</div>
 					</article>
 
