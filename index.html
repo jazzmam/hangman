@@ -17,9 +17,9 @@
 				<div class="column is-12-desktop has-text-centered">
 					<h1 class="title is-1">Hangman</h1>
 					<div class="wrong-letters-container">
-						<div id="wrong-letters">
-							<p class="subtitle is-5">Wrong letters</p>
-							<span class="subtitle is-5">e,r,t,y</span>
+						<div id="wrong-letters-container">
+							<p>Wrong letters:</p>
+							<span class="wrong-letters">e,r,t,y</span>
 						</div>
 					</div>
 					<div class="game-container">
@@ -52,18 +52,19 @@
 						</div>
 					</div>
 
-					<!-- Container for final message -->
-					<div class="popup-container" id="popup-container">
-						<div class="popup">
-							<h2 id="final-message">You have won!</h2>
-							<button class="button is-primary" id="play-button">Play Again</button>
-						</div>
-					</div>
-
 					<!-- Notification -->
 					<div class="notification-container" id="notification-container">
 						<p>You have already entered this letter</p>
 					</div>
+
+					<!-- Container for final message -->
+					<article class="popup-container" id="popup-container">
+						<div class="popup">
+							<p id="final-message">You have won!</p>
+							<button class="button is-primary" id="play-button">Play Again</button>
+						</div>
+					</article>
+
 				</div>
 			</div>
 		</div>

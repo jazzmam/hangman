@@ -11,9 +11,13 @@ body {
 	color: #00d1b2;
 }
 
+.title.is-1 {
+	margin-bottom: 3rem;
+}
+
 .game-container {
 	padding: 20px;
-	margin: auto;
+	margin: 50px;
 }
 
 .figure-container {
@@ -21,6 +25,12 @@ body {
 	stroke: #fff;
 	stroke-width: 3;
 	stroke-linecap: round;
+}
+
+.game-container {
+	position: relative;
+	padding: 5px 50px 50px;
+    margin: auto auto 20px;
 }
 
 .subtitle {
@@ -31,14 +41,13 @@ body {
 	display: none;
 }
 
-.game-container {
-	position: relative;
+.wrong-letters {
+	letter-spacing: 3px;
 }
 
 .word {
 	display: flex;
 	position: absolute;
-	bottom: 10px;
 	left: 50%;
 	transform: translateX(-50%);
 }
