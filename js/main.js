@@ -12,7 +12,7 @@ const words = ['pandemic', 'confirmed case', 'immunity', 'outbreak', 'quarantine
 
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
-const correctLetters = ['o', 'u', 't', 'b', 'r', 'e', 'a', 'k'];
+const correctLetters = [];
 const wrongLetters = [];
 
 function displayWord() {
@@ -37,6 +37,15 @@ function displayWord() {
 		popup.style.display = 'flex';
 	}
 }
+
+//Keyboard pressing
+window.addEventListener('keydown', e => {
+	//console.log(e.keyCode);
+
+	if((e.keyCode >= 65 && e.keyCode <= 90) || e.keyCode == 32 || e.keyCode == 189) {
+		console.log('sdss');
+	}
+});
 
 displayWord();
 
