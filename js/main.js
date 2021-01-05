@@ -38,9 +38,9 @@ function displayWord() {
 	}
 }
 
-function updateWhenWrongLetterIsEntered(insetedLetter) {
+function updateWhenWrongLetterIsEntered(insertedLetter) {
 	// Display wrong letters section
-	wrongLettersEl.innerText += insetedLetter;
+	wrongLettersEl.innerText += insertedLetter;
 	wrongLettersContainerEl.style.display = 'inline-flex';
 
 	// Show figure parts
@@ -100,10 +100,11 @@ playAgainBtn.addEventListener("click", function() {
 		part.style.display = 'none';
 	});
 
-	correctLetters = [];
-	wrongLetters = [];
-	wrongInputs = [];
-	
+	correctLetters.length = 0;
+	wrongLetters.length = 0;
+	wordEl.innerHTML = '';
+	wrongLettersEl.innerHTML = '';
+	wrongLettersContainerEl.style.display = 'none';
 	displayWord();
 });
 
