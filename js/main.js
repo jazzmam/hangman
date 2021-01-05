@@ -39,10 +39,19 @@ function displayWord() {
 	}
 }
 
-function updateWrongLettersEl(pressedLetter) {
-	wrongLettersEl.innerText += pressedLetter;
+function updateWrongLettersEl(insetedLetter) {
+	wrongLettersEl.innerText += insetedLetter;
 	wrongLettersContainerEl.style.display = 'inline-flex';
-   }
+
+	figureParts.forEach((part, index) => {
+		const wrongInputs = wrongLetterslength;
+
+		if(index < wrongInputs) {
+			part.style.display = 'flex';
+		}
+
+	});
+}
 
 function shownNotification() {
 	notification.classList.add('show');
