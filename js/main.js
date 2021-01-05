@@ -91,5 +91,22 @@ window.addEventListener('keydown', e => {
 	}
 });
 
+
+playAgainBtn.addEventListener("click", function() {
+	finalMessage.innerText = '';
+	popup.style.display = 'none';
+
+	figureParts.forEach((part, index) => {
+		part.style.display = 'none';
+	});
+
+	correctLetters = [];
+	wrongLetters = [];
+	wrongInputs = [];
+	
+	displayWord();
+});
+
+
 displayWord();
 
