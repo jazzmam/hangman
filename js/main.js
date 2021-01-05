@@ -45,6 +45,12 @@ function updateWrongLettersEl() {
 
 function shownNotification() {
  console.log("inside shownNotification function - you have already entered this letter");
+
+	notification.classList.add('show');
+
+	setTimeout(() => {
+		notification.classList.remove('show');
+	}, 2000);
 }
 
 //Keyboard pressing
