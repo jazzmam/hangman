@@ -15,11 +15,6 @@ body {
 	margin-bottom: 3rem;
 }
 
-.game-container {
-	padding: 20px;
-	margin: 50px;
-}
-
 .figure-container {
 	fill: transparent;
 	stroke: #fff;
@@ -29,7 +24,7 @@ body {
 
 .game-container {
 	position: relative;
-	padding: 50px 70px;
+	padding: 50px;
     margin: auto auto 20px;
 }
 

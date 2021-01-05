@@ -39,6 +39,10 @@ function displayWord() {
 	}
 }
 
+function updateWrongLettersEl() {
+	console.log("inside updateWrongLetters function");
+   }
+
 function shownNotification() {
  console.log("inside shownNotification function - you have already entered this letter");
 }
@@ -60,6 +64,10 @@ window.addEventListener('keydown', e => {
 				wrongLetters.push(pressedLetter);
 				wrongLettersEl.innerText += pressedLetter;
 				wrongLettersContainerEl.style.display = 'inline-flex';
+
+				updateWrongLettersEl();
+			} else {
+				shownNotification();
 			}
 		}
 	}
