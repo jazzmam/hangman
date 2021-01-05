@@ -39,13 +39,12 @@ function displayWord() {
 	}
 }
 
-function updateWrongLettersEl() {
-	console.log("inside updateWrongLetters function");
+function updateWrongLettersEl(pressedLetter) {
+	wrongLettersEl.innerText += pressedLetter;
+	wrongLettersContainerEl.style.display = 'inline-flex';
    }
 
 function shownNotification() {
- console.log("inside shownNotification function - you have already entered this letter");
-
 	notification.classList.add('show');
 
 	setTimeout(() => {
@@ -68,10 +67,8 @@ window.addEventListener('keydown', e => {
 		} else {
 			if (!wrongLetters.includes(pressedLetter)) {
 				wrongLetters.push(pressedLetter);
-				wrongLettersEl.innerText += pressedLetter;
-				wrongLettersContainerEl.style.display = 'inline-flex';
 
-				updateWrongLettersEl();
+				updateWrongLettersEl(pressedLetter);
 			} else {
 				shownNotification();
 			}
