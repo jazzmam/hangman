@@ -6,8 +6,7 @@ const playAgainBtn = document.getElementById('play-again');
 const popup = document.getElementById('popup-container');
 const notification = document.getElementById('notification-container');
 const finalMessage = document.getElementById('final-message');
-
-const figureParts = document.querySelectorAll('figure-part'); 
+const figureParts = document.querySelectorAll('.figure-part'); 
 
 const words = ['pandemic', 'confirmed case', 'immunity', 'outbreak', 'quarantine', 'self-isolation', 'mask', 'social distancing', 'ventilator', 'antibody', 'isolation'];
 
@@ -39,18 +38,25 @@ function displayWord() {
 	}
 }
 
-function updateWrongLettersEl(insetedLetter) {
+function updateWhenWrongLetterIsEntered(insetedLetter) {
+	// Display wrong letters section
 	wrongLettersEl.innerText += insetedLetter;
 	wrongLettersContainerEl.style.display = 'inline-flex';
 
+	// Show figure parts
 	figureParts.forEach((part, index) => {
-		const wrongInputs = wrongLetterslength;
+		const wrongInputs = wrongLetters.length;
 
 		if(index < wrongInputs) {
 			part.style.display = 'flex';
 		}
-
 	});
+
+	// Check if lost
+	if (wrongLetters.length === figureParts.length) {
+		finalMessage.innerText = 'You lost :(';
+		popup.style.display = 'flex';
+	}
 }
 
 function shownNotification() {
@@ -77,7 +83,7 @@ window.addEventListener('keydown', e => {
 			if (!wrongLetters.includes(pressedLetter)) {
 				wrongLetters.push(pressedLetter);
 
-				updateWrongLettersEl(pressedLetter);
+				updateWhenWrongLetterIsEntered(pressedLetter);
 			} else {
 				shownNotification();
 			}
